@@ -238,7 +238,7 @@ pub use async_attributes::{main, test};
 #[cfg(feature = "std")]
 mod macros;
 
-cfg_std! {
+//cfg_std! {
     pub mod future;
     pub mod io;
     pub mod os;
@@ -246,15 +246,15 @@ cfg_std! {
     pub mod stream;
     pub mod sync;
     pub mod task;
-}
+//}
 
-cfg_default! {
+//cfg_default! {
     pub mod fs;
     pub mod path;
     pub mod net;
-}
+//}
 
-cfg_unstable! {
+//cfg_unstable! {
     pub mod pin;
     pub mod process;
 
@@ -267,4 +267,4 @@ cfg_unstable! {
 
     #[doc(inline)]
     pub use std::{write, writeln};
-}
+//}
